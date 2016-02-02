@@ -1,4 +1,5 @@
 <?php
+namespace WaitingFor;
 
 class Regex {
 	private $m_regex;

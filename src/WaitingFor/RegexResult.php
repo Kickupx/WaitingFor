@@ -1,4 +1,5 @@
 <?php
+namespace WaitingFor;
 
 class RegexResult {
 	private $regexMatches;

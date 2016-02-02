@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'WaitingFor' => array($baseDir . '/src'),
+    'WaitingFor/' => array($baseDir . '/src'),
 );
