@@ -1,0 +1,16 @@
+{
+    "name": "jerry/waiting-for",
+    "description": "WaitingFor based tokenizer",
+    "authors": [
+        {
+            "name": "Jerry Andersson",
+            "email": "Kickupx@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WaitingFor": "src/"
+        }
+    }
+}
