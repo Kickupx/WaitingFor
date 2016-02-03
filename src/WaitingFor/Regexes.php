@@ -5,8 +5,8 @@ class Regexes {
 	private $regexes = [];
 	
 	function add($regex, Callable $func) {
-		enforceNotExists($regex, $this->regexes, "Regex");
-		$this->regexes .= new Regex($regex, $func);
+		\Enforce\enforceNotExists($regex, $this->regexes, "Regex");
+		array_push($this->regexes, new Regex($regex, $func));
 	}
 	
 	function match($str) {
