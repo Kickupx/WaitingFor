@@ -1,0 +1,49 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "8b744012dd74f7f1b3a7357eb236d79b",
+    "content-hash": "360a9f73f78aabd0be1ef2b882bc5866",
+    "packages": [
+        {
+            "name": "kickupx/enforce",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kickupx/enforce.git",
+                "reference": "37a2adbec9fe7518f1079a44d51ca354027d8f87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kickupx/enforce/zipball/37a2adbec9fe7518f1079a44d51ca354027d8f87",
+                "reference": "37a2adbec9fe7518f1079a44d51ca354027d8f87",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "enforce.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Jerry Andersson",
+                    "email": "Kickupx@gmail.com"
+                }
+            ],
+            "description": "Really simple enforce helper library",
+            "time": "2016-02-02 16:21:04"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
