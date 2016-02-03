@@ -39,7 +39,7 @@ class RegexResult {
 		$endIndex = $startIndex + $match[0];
 		
 		//Check if there are any earlier matches and filter out overlapping
-		for($i = $matchesIndex + 1; $this->regexMatches; $i++) {
+		for($i = $matchesIndex + 1; $i < count($this->regexMatches); $i++) {
 			$lower_match = $this->regexMatches[$i][$this->regexIndices[$i]];
 			
 			//Check if is before

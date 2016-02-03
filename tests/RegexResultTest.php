@@ -14,20 +14,20 @@ class RegexResultTest extends PHPUnit_Framework_TestCase
         $index = 0;
         $regexes = new Regexes();
         $regexes->add("/token/", function(array $capture) use(&$index) {
-            $this->assert($capture[0] == "token");
+            $this->assertTrue($capture[0] == "token");
             $index = $capture[1];
         });
 
         $regexes->add("/t/", function(array $capture) use(&$index) {
-            $this->assert($capture[1] > $index);
+            $this->assertTrue($capture[1] > $index);
         });
 
         $regexes->add("/ker/", function(array $capture) use(&$index) {
-            $this->assert(true);
+            $this->assertTrue(true);
         });
 
         $regexes->add("/toker/", function(array $capture) use(&$index) {
-            $this->assert(false);
+            $this->assertTrue(false);
         });
 
         $regexes->match($input)->all();
