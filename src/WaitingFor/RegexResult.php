@@ -13,7 +13,7 @@ class RegexResult {
 			$res = null;
 			preg_match_all($regex->regex(), $str, $res, PREG_CAPTURE_OFFSET);
 			array_combine($this->regexMatches, $res);
-			array_combine($this->regexIndices, 0);
+			array_combine($this->regexIndices, [0]);
 		}
 	}
 	
