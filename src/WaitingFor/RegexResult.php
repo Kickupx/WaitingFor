@@ -7,7 +7,6 @@ class RegexResult {
 	private $regex;
     private $matches;
     private $matchesCount;
-    private $current_index = 0;
 
     /**
      * RegexResult constructor.
@@ -23,23 +22,18 @@ class RegexResult {
     }
 
     function next($min_index) {
-        if($this->current_index == $this->matchesCount)
-            return null;
-        else {
-            foreach($this->matches as $matchBig) {
-                $match = $matchBig[0];
-                if($match[1] < $min_index) { $this->current_index++; continue; }
+        foreach($this->matches[0] as $match) {
+            if($match[1] < $min_index) { continue; }
 
-                $res = array_merge(
-                    $this->matches[$this->current_index][0],
-                    [
-                        'priority' => $this->priority,
-                        'delegate' => $this->delegate
-                    ]);
-                $this->current_index++;
-                return $res;
-            }
+            $res = array_merge(
+                $match,
+                [
+                    'priority' => $this->priority,
+                    'delegate' => $this->delegate
+                ]);
+            return $res;
         }
+
     }
 
     /**
