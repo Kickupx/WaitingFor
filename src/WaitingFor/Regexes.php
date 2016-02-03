@@ -10,6 +10,6 @@ class Regexes {
 	}
 	
 	function match($str) {
-		return new RegexResult($this->regexes, $str);
+		return new RegexResults($this->regexes, $str);
 	}
 }
