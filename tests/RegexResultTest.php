@@ -1,4 +1,5 @@
 <?php
+use WaitingFor\Regexes;
 
 /**
  * Created by PhpStorm.

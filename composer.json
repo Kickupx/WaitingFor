@@ -7,10 +7,12 @@
             "email": "Kickupx@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "kickupx/enforce": "^1.0"
+    },
     "autoload": {
         "psr-4": {
-            "WaitingFor\\": "src/"
+            "WaitingFor\\": "src/WaitingFor"
         }
     }
 }
