@@ -12,7 +12,7 @@ class RegexResult {
 		foreach($regexes as $regex) {
 			$res = [];
 			preg_match_all($regex->regex(), $str, $res, PREG_OFFSET_CAPTURE);
-			array_push($this->regexMatches, $res);
+			array_push($this->regexMatches, $res[0]);
 			array_push($this->regexIndices, 0);
 		}
 	}
