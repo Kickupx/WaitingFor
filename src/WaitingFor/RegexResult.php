@@ -2,17 +2,17 @@
 namespace WaitingFor;
 
 class RegexResult {
-	private $regexMatches;
-	private $regexIndices;
-	private $regexMeta;
+	private $regexMatches = [];
+	private $regexIndices = [];
+	private $regexMeta = [];
 	
 	function __construct(array $regexes, $str) {
 		$this->regexMeta = $regexes;
 	
 		foreach($regexes as $regex) {
-			$res = null;
-			preg_match_all($regex->regex(), $str, $res, PREG_CAPTURE_OFFSET);
-			array_combine($this->regexMatches, $res);
+			$res = [];
+			preg_match_all($regex->regex(), $str, $res, PREG_OFFSET_CAPTURE);
+			array_push($this->regexMatches, $res);
 			array_push($this->regexIndices, 0);
 		}
 	}

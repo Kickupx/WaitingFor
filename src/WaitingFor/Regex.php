@@ -10,6 +10,6 @@ class Regex {
 		$this->m_delegate = $delegate;
 	}
 	
-	function regex() { return m_regex; }
-	function delegate() { return m_delegate; }
+	function regex() { return $this->m_regex; }
+	function delegate() { return $this->m_delegate; }
 }
