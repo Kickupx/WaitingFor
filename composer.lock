@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8b744012dd74f7f1b3a7357eb236d79b",
-    "content-hash": "360a9f73f78aabd0be1ef2b882bc5866",
+    "hash": "cb6116c267c8f530e830ae0b0d202cde",
+    "content-hash": "e541a7b327f4b2014ad6e6d70f618350",
     "packages": [
         {
             "name": "kickupx/enforce",
@@ -36,6 +36,58 @@
             ],
             "description": "Really simple enforce helper library",
             "time": "2016-02-02 16:21:04"
+        },
+        {
+            "name": "lstrojny/functional-php",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lstrojny/functional-php.git",
+                "reference": "36506d28c29fcfdc260c2341e251ea8834f8d8ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lstrojny/functional-php/zipball/36506d28c29fcfdc260c2341e251ea8834f8d8ed",
+                "reference": "36506d28c29fcfdc260c2341e251ea8834f8d8ed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Functional/_import.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Strojny",
+                    "email": "lstrojny@php.net",
+                    "homepage": "http://usrportage.de"
+                },
+                {
+                    "name": "Max Beutel",
+                    "email": "nash12@gmail.com"
+                }
+            ],
+            "description": "Functional primitives for PHP",
+            "keywords": [
+                "functional"
+            ],
+            "time": "2015-12-03 08:26:11"
         }
     ],
     "packages-dev": [],
