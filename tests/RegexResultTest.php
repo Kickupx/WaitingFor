@@ -9,7 +9,7 @@ use WaitingFor\Regexes;
  */
 class RegexResultTest extends PHPUnit_Framework_TestCase
 {
-    function testOne() {
+    function test1() {
         $input = "token tok toker";
         $index = 0;
         $callCount = 0;
@@ -37,5 +37,37 @@ class RegexResultTest extends PHPUnit_Framework_TestCase
 
         $regexes->match($input)->all();
         $this->assertEquals(4, $callCount);
+    }
+
+    function test2() {
+        $input =
+            "
+            ======
+            ";
+        $ran = false;
+
+        $regexes = new Regexes();
+        $regexes->add('/=====[=]*/', function(array $capture) use(&$ran) {
+            $ran = true;
+        });
+        $regexes->match($input)->all();
+
+        $this->assertTrue($ran);
+    }
+
+    function test3() {
+        $input =
+            "
+            =====
+            ";
+        $ran = false;
+
+        $regexes = new Regexes();
+        $regexes->add('/=====[=]*/', function(array $capture) use(&$ran) {
+            $ran = true;
+        });
+        $regexes->add("/\n\r|\r\n|\n|\r/", function(array $capture) {});
+        $regexes->match($input)->all();
+        $this->assertTrue($ran);
     }
 }

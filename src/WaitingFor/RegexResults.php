@@ -52,11 +52,17 @@ class RegexResults
             $bStart = $b[1];
             $bEnd = $b[1] + strlen($b[0]);
 
-            if($aStart <= $bStart && $aEnd >= $bStart) {
+            if($aStart <= $bStart && $aEnd > $bStart) {
                 if ($a['priority'] < $b['priority']) return 1;
                 else if ($a['priority'] > $b['priority']) return -1;
                 else return 0;
-            } else if($bStart <= $aStart && $bEnd >= $aStart) {
+
+                /**
+                 * Bug 1 fixed:
+                 *  bEnd and aStart does not overlap if they are equal. Because end of string is one more than actual
+                 *  like normal array indexing.
+                 */
+            } else if($bStart <= $aStart && $bEnd > $aStart) {
                 if ($a['priority'] < $b['priority']) return -1;
                 else if ($a['priority'] > $b['priority']) return 1;
                 else return 0;
